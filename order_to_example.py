@@ -20,8 +20,8 @@ def extract_features(img_path, model):
     return features.flatten()
     
 # Path to the folder containing images and path to the example image
-folder_path = "all\\"
-example_image_path = "all\\image_1137.png"  # Replace with your example image path
+folder_path = "generated_images_materials_n_shapes_2\\"
+example_image_path = "generated_images_materials_n_shapes_2\\image_cone_cardboard_73.png"  # Replace with your example image path
 
 # Get a list of image paths from the folder
 image_paths = [os.path.join(folder_path, img) for img in os.listdir(folder_path) if img.endswith(('.jpg', '.jpeg', '.png'))]
@@ -43,7 +43,7 @@ num_clusters = 8
 cluster_size = len(sorted_image_paths) // num_clusters
 
 # Create a directory to store images for each cluster
-output_directory = "output_clusters_2\\"
+output_directory = "output_clusters_cone_cardboard\\"
 os.makedirs(output_directory, exist_ok=True)
 
 # Copy images to corresponding cluster folders with similarity score in filename
